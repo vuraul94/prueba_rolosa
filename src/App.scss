@@ -1,0 +1,72 @@
+:root {
+  --titleFont: "Merriweather Sans", sans-serif;
+  --actionFont: "Bebas Neue", cursive;
+  --textFont: "Roboto", sans-serif;
+  --mainColor: #4da6e0;
+  --highlightColor: #98caeb;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: var(--textFont);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+h6 {
+  font-family: var(--titleFont);
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+  font-family: var(--actionFont);
+  cursor: pointer;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  background: var(--mainColor);
+  color: #fff;
+  transition: 0.2s;
+  margin: 0.4rem;
+  &:hover {
+    background: var(--highlightColor);
+    box-shadow: 0 0 2rem var(--highlightColor);
+    transition: 0.2s;
+  }
+}
+
+input {
+  border-radius: 0.4rem;
+  &[type="text"],
+  &[type="password"],
+  &[type="tel"],
+  &[type="email"],
+  &[type="number"] {
+    margin: 0.4rem;
+    width: 80%;
+    border: 0.1rem solid var(--mainColor);
+    transition: 1s;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2rem var(--highlightColor);
+      transition: 0.2s;
+    }
+  }
+}
